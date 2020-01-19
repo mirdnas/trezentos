@@ -158,6 +158,21 @@ body, p {
   background-color: white;
   padding: 2px 2px 0 0;
 }
+.card-image {
+  width: 45.5%;
+}
+.card-content {
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+  position: relative;
+}
+.card-content .card-title {
+  line-height: 150%;
+  margin: 2rem 0;
+  font-size: 32px;
+}
 .card-content span {
   background-color: #90bf00;
   width: 100%;
@@ -167,6 +182,19 @@ body, p {
   color: white;
   text-transform: uppercase;
   line-height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card-content p {
+  font-size: 11px;
+  font-weight: bold;
+  color: #2d6ee0;
+  text-transform: uppercase;
+}
+.card-content small {
+  font-size: 12px;
+  color: #2d6ee0;
 }
 .card-title {
   font-size: 32px;
@@ -226,6 +254,9 @@ body, p {
 .news-form ::placeholder {
   color: white;
 }
+.news-form-checkbox {
+  margin-left: 8rem;
+}
 .news-form button {
   background-color: #fdfeff;
   box-shadow: 0px 8px 16px 0px rgba(69, 41, 35, 0.3);
@@ -242,6 +273,7 @@ body, p {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   max-width: 70%;
 }
 .news-form-row span {
@@ -307,7 +339,6 @@ body, p {
   color: white;
   font-size: 12px;
   font-weight: 300;
-  padding-top: 20px;
 }
 .styled-checkbox + label:before {
   content: "";
@@ -316,16 +347,18 @@ body, p {
   vertical-align: text-top;
   width: 20px;
   height: 20px;
-  background: white;
+  background: transparent;
+  border: 1px solid white;
+  margin-top: -6px;
 }
 .styled-checkbox:hover + label:before {
-  background: #f35429;
+  color: #eca611;
 }
 .styled-checkbox:focus + label:before {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
 }
 .styled-checkbox:checked + label:before {
-  background: #f35429;
+  color: #eca611;
 }
 .styled-checkbox:disabled + label {
   color: #b8b8b8;
@@ -339,11 +372,11 @@ body, p {
   content: "";
   position: absolute;
   left: 5px;
-  top: 9px;
-  background: white;
+  top: 5px;
+  background: #eca611;
   width: 2px;
   height: 2px;
-  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  box-shadow: 2px 0 0 #eca611, 4px 0 0 #eca611, 4px -2px 0 #eca611, 4px -4px 0 #eca611, 4px -6px 0 #eca611, 4px -8px 0 #eca611;
   transform: rotate(45deg);
 }
 
@@ -424,6 +457,7 @@ body, p {
   list-style: none;
   opacity: 0;
   border: 2px solid #eca611;
+  margin-top: 8px;
   animation-name: HideList;
   animation-duration: 0.5s;
   animation-delay: 0.5s;
@@ -435,6 +469,8 @@ body, p {
   display: block;
   padding: 15px;
   background-color: #fff;
+  color: #2d6ee0;
+  font-size: 12px;
 }
 .select-box__option:hover, .select-box__option:focus {
   color: #eca611;

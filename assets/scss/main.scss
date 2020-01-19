@@ -105,7 +105,23 @@ body, p{
     background-color: white;
     padding: 2px 2px 0 0;
 
+    &-image {
+        width: 45.5%;
+    }
+
     &-content {
+        width: 54%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 4rem;
+        position: relative;
+
+        .card-title {
+            line-height: 150%;
+            margin: 2rem 0;
+            font-size: 32px;
+        }
+
         span {
             background-color: rgb(144, 191, 0);
             width: 100%;
@@ -115,6 +131,19 @@ body, p{
             color: white;
             text-transform: uppercase;
             line-height: 30px;      
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        p{
+            font-size: 11px;
+            font-weight: bold;
+            color: $blue;
+            text-transform: uppercase;
+        }
+        small {
+            font-size: 12px;
+            color: $blue;
         }
     }
 
@@ -188,6 +217,10 @@ body, p{
             color: white;
         }
 
+        &-checkbox {
+            margin-left: 8rem;
+        }
+
         button {
             background-color: rgb(253, 254, 255);
             box-shadow: 0px 8px 16px 0px rgba(69, 41, 35, 0.3);
@@ -205,6 +238,7 @@ body, p{
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             max-width: 70%;
             span{
                 color: white;
@@ -279,7 +313,6 @@ body, p{
       color: white;
       font-size: 12px;
       font-weight: 300;
-      padding-top: 20px;
     }
   
     // Box.
@@ -290,12 +323,15 @@ body, p{
       vertical-align: text-top;
       width: 20px;
       height: 20px;
-      background: white;
+      background: transparent;
+      border: 1px solid white;
+      margin-top: -6px;
     }
   
     // Box hover
     &:hover + label:before {
-      background: #f35429;
+    //   background: #f35429;
+    color: $yellow;
     }
     
     // Box focus
@@ -305,7 +341,8 @@ body, p{
   
     // Box checked
     &:checked + label:before {
-      background: #f35429;
+    //   background: #f35429;
+    color: $yellow;
     }
     
     // Disabled state label.
@@ -325,17 +362,17 @@ body, p{
       content: '';
       position: absolute;
       left: 5px;
-      top: 9px;
-      background: white;
+      top: 5px;
+      background: #eca611;
       width: 2px;
       height: 2px;
       box-shadow: 
-        2px 0 0 white,
-        4px 0 0 white,
-        4px -2px 0 white,
-        4px -4px 0 white,
-        4px -6px 0 white,
-        4px -8px 0 white;
+        2px 0 0 #eca611,
+        4px 0 0 #eca611,
+        4px -2px 0 #eca611,
+        4px -4px 0 #eca611,
+        4px -6px 0 #eca611,
+        4px -8px 0 #eca611;
       transform: rotate(45deg);
     }
   }
@@ -430,6 +467,7 @@ body, p{
       list-style: none;
       opacity: 0;
       border: 2px solid $yellow;
+      margin-top: 8px;
       
       // We need to use animation with delay.
       // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
@@ -448,6 +486,8 @@ body, p{
       display: block;
       padding: 15px;
       background-color: #fff;
+      color: $blue;
+      font-size: 12px;
       
       &:hover,
       &:focus {
