@@ -1,0 +1,247 @@
+/* 
+* Responsive breakpoints
+* https://medium.com/@uiuxlab/the-most-used-responsive-breakpoints-in-2017-of-mine-9588e9bd3a8a
+*/
+/* Bootstrap Breakpoints */
+
+@media all and (min-width:1200px) {
+    .news {
+        height: 418px;
+    }
+}
+
+@media all and (max-width: 1199px) { 
+    
+} 
+
+@media all and (max-width: 991px) { 
+
+    .container {
+        width: calc(100% - 60px);
+    }
+
+    .title{
+        line-height: 1.3;
+        padding: 1em 0;
+        span {
+            font-size: inherit;
+            text-transform: inherit;
+            letter-spacing: inherit;
+        }        
+    } 
+
+    .card{
+        &-content, &-image { width: 100%; }
+        &-content {
+            padding: 0 1rem;
+        }
+        &-title {
+            font-size: 26px;
+            line-height: 1.3;
+        }
+    }
+
+    .iphone {
+        display: none;
+    }
+
+    .news{
+        &-content {
+            max-width: 100%;
+            p { padding: 0 20px; }
+        }
+        &-form {
+            input[type="text"]{ width: 100%; }
+            button {
+                display: block;
+                position: relative;
+                right: inherit;
+                margin: 20px auto;
+            }
+            &-row {
+                max-width: 100%;
+                margin: 40px 10px;
+                span {
+                    display: block;
+                    margin: 20px auto;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            &-checkbox { margin: 0; }
+        }
+    }
+
+    .link-download {
+        margin: 1rem 0;
+        &:before{ display: none; }
+    }
+
+    .select-box {
+        margin: 1rem auto;
+    }
+
+} 
+
+@media all and (max-width: 768px) { 
+
+    
+
+/* https://codepen.io/erikterwan/pen/EVzeRP */
+/* Responsive Menu */
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+ #menuToggle {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    // text-decoration: none;
+    // color: #232323;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: tomato;
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    
+    margin: -100px 0 0 -100px;
+    padding: 150px;
+    padding-top: 100px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+    width: 100%;
+    position: fixed;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 16px;
+    display: block;
+    &.social-item { display: none; }
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked~ul {
+    transform: none;
+}
+} 
+
+@media all and (max-width: 575px) { 
+    
+}
+
