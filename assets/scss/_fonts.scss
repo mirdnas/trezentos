@@ -1,0 +1,8 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css';
+
+@import 'https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css';
+
+@mixin gotham( $weight: 'normal' ) {
+    font-family: 'GothamPro', sans-serif;
+    font-weight: $weight
+}

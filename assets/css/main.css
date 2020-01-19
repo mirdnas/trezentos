@@ -1,0 +1,453 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css';
+@import 'https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css';
+* {
+  line-height: 100%;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  list-style-type: none;
+}
+
+form input {
+  line-height: initial;
+}
+form input,
+form textarea,
+form select {
+  outline: none !important;
+}
+form input:active, form input:focus,
+form textarea:active,
+form textarea:focus,
+form select:active,
+form select:focus {
+  outline: none !important;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 100%;
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  list-style-type: none;
+}
+
+label {
+  font-weight: normal;
+}
+
+body, p {
+  font-family: "GothamPro", sans-serif;
+  font-weight: "normal";
+}
+
+.container, .news {
+  width: calc(100% - 120px);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.bg {
+  background-image: -moz-linear-gradient(37deg, #f5ac46 0%, #f28756 55%, #ee6265 100%);
+  background-image: -webkit-linear-gradient(37deg, #f5ac46 0%, #f28756 55%, #ee6265 100%);
+  background-image: -ms-linear-gradient(37deg, #f5ac46 0%, #f28756 55%, #ee6265 100%);
+}
+
+/* header */
+.header {
+  background-color: white;
+}
+.header .container, .header .news {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-inline ul, .menu ul, .social ul {
+  list-style-type: none;
+}
+.list-inline li, .menu li, .social li {
+  display: inline-block;
+}
+
+.menu-item, .social-item {
+  padding: 0 10px;
+}
+
+.menu-link {
+  transition: all 300ms ease-in-out;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  color: #2d6ee0;
+  border-bottom: 3px solid transparent;
+}
+.menu-link:hover {
+  color: #eca611;
+  border-color: #eca611;
+}
+
+.social-item a {
+  color: #2d6ee0;
+}
+.social-item a:hover {
+  color: #eca611;
+}
+
+/* logo */
+.logo {
+  width: 70px;
+  height: 30px;
+  display: block;
+}
+
+/* title */
+.title {
+  font-family: "GothamPro", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 37px;
+  padding: 90px 0;
+  color: white;
+  line-height: 200%;
+}
+.title span {
+  text-transform: uppercase;
+  font-size: 60px;
+  letter-spacing: 8.5px;
+}
+
+/* card */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 2px 2px 0 0;
+}
+.card-content span {
+  background-color: #90bf00;
+  width: 100%;
+  height: 30px;
+  display: block;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+.card-title {
+  font-size: 32px;
+  color: #2d6ee0;
+  font-weight: normal;
+}
+
+/* news */
+.news {
+  background-color: #2e71f2;
+  border-radius: 10px;
+  box-shadow: 0px 47px 136px 0px rgba(0, 0, 0, 0.27);
+  height: 418px;
+  margin: 150px auto;
+  position: relative;
+}
+.news * {
+  z-index: 2;
+  position: relative;
+}
+.news:after {
+  content: " ";
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-image: url("../images/news.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.news-content {
+  max-width: 70%;
+}
+.news-content p {
+  font-size: 12px;
+  color: white;
+  line-height: 150%;
+  text-align: center;
+}
+.news-title {
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  padding: 70px 0 30px 0;
+}
+.news-form input[type=text] {
+  border: 0;
+  border-radius: 4px;
+  padding-left: 30px;
+  background-color: rgba(139, 179, 254, 0.2);
+  width: 395px;
+  height: 42px;
+  color: white;
+}
+.news-form ::placeholder {
+  color: white;
+}
+.news-form button {
+  background-color: #fdfeff;
+  box-shadow: 0px 8px 16px 0px rgba(69, 41, 35, 0.3);
+  border-radius: 40px;
+  position: absolute;
+  width: 144px;
+  height: 42px;
+  text-transform: uppercase;
+  right: -20px;
+}
+.news-form-row {
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 70%;
+}
+.news-form-row span {
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.link-download {
+  display: inline-block;
+  color: white;
+  border-radius: 22px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  width: 276px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.link-download:before {
+  content: " ";
+  width: 17px;
+  height: 20px;
+  display: block;
+  background-image: url("../images/appleicon.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  left: 20px;
+}
+
+.iphone {
+  position: absolute;
+  right: 50px;
+  bottom: 47px;
+  z-index: 2;
+}
+
+/* copyright */
+.copyright {
+  color: #97aacd;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.copyright .logo {
+  margin: 0 auto 20px;
+}
+
+/* referencia para fazer checkbox: https://codepen.io/spacemonkey/pen/vmZROv  */
+/* custom checkbox */
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  padding-top: 20px;
+}
+.styled-checkbox + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+}
+.styled-checkbox:hover + label:before {
+  background: #f35429;
+}
+.styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.styled-checkbox:checked + label:before {
+  background: #f35429;
+}
+.styled-checkbox:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+.styled-checkbox:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+.styled-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+/* Custom SELECT  */
+/* https://codepen.io/miniven/pen/ZJydge */
+.select-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial", sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+@media (min-width: 768px) {
+  .select-box {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .select-box {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .select-box {
+    width: 40%;
+  }
+}
+.select-box__current {
+  position: relative;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+.select-box__current:focus + .select-box__list {
+  opacity: 1;
+  animation-name: none;
+}
+.select-box__current:focus + .select-box__list .select-box__option {
+  cursor: pointer;
+}
+.select-box__current:focus .select-box__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.select-box__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  transition: 0.2s ease;
+}
+.select-box__value {
+  display: flex;
+}
+.select-box__input {
+  display: none;
+}
+.select-box__input:checked + .select-box__input-text {
+  display: block;
+}
+.select-box__input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 13px;
+  font-weight: 200;
+}
+.select-box__list {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  border: 2px solid #eca611;
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+.select-box__option {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+}
+.select-box__option:hover, .select-box__option:focus {
+  color: #eca611;
+  background-color: #fbfbfb;
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
